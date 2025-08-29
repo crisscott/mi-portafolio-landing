@@ -1,11 +1,8 @@
 import type { Metadata } from 'next';
 import '@/src/styles/globals.css';
-import { Inter } from 'next/font/google';
 import { Providers } from '@/src/components/providers/Providers';
 import Navbar from '@/src/components/theme/Navbar';
 import { Footer } from '@/src/components/theme/Footer';
-
-const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
     title: 'Cristopher Scott - Full Stack Developer',
@@ -20,9 +17,7 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="es" suppressHydrationWarning>
-            <body
-                className={`${inter.className} antialiased bg-white text-black dark:bg-zinc-900 dark:text-white transition-colors`}
-            >
+            <body className="antialiased bg-white text-black dark:bg-zinc-900 dark:text-white transition-colors">
                 <Providers>
                     <div className="flex flex-col min-h-screen">
                         <Navbar />
